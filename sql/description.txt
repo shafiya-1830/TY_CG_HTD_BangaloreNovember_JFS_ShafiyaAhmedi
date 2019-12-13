@@ -1,0 +1,30 @@
+SELECTION :- Retrival of data by the help of only column_name.
+
+SELECT */[DISTINCT] COLUMN_NAME/ EXPRESSION [ALIAS]
+FROM TABLE_NAME
+
+------------------------------------------------------
+PROJECTION :-Retrival of data by the help of both column and row names.
+
+SELECT */[DISTINCT] COLUMN_NAME/ EXPRESSION [ALIAS]			ORDER OF EXECUTION
+FROM TABLE_NAME								FROM,WHERE,SELECT
+WHERE <filter condition>
+
+------------------------------------------------------
+
+--MRF ignores null values--
+
+------------------------------------------------------
+GROUP BY:-	
+
+SELECT */[DISTINCT] COLUMN_NAME/ EXPRESSION [ALIAS]			ORDER OF EXECUTION
+FROM TABLE_NAME								FROM,WHERE,GROUP BY,SELECT
+[WHERE <FILTER CONDITION>]GROUP BY COLUMN-NAME;
+
+-----------------------------------------------------
+HAVING CLAUSE:-
+
+SELECT */[DISTINCT] COLUMN_NAME/ EXPRESSION [ALIAS]			ORDER OF EXECUTION
+FROM TABLE_NAME								FROM,WHERE,GROUP BY,HAVING,SELECT
+[WHERE <FILTER CONDITION>]GROUP BY COLUMN-NAME;
+HAVING <GROUP FILTER CONDITION>
