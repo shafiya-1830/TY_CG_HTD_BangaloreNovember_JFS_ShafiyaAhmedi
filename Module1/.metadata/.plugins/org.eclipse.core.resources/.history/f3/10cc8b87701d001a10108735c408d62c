@@ -1,0 +1,14 @@
+package com.capgemini.contactdetails.dao;
+
+import java.util.List;
+
+import com.capgemini.contactdetails.bean.Contact;
+
+public interface ContactDao {
+
+	boolean addContact(Contact contact);
+	boolean deleteContact(String name);
+	boolean modifyContact(Contact contact);
+	Contact getContact(String name);
+	public List<Contact> getAllContact();
+}

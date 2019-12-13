@@ -1,0 +1,10 @@
+package com.capgemini.contactdetails.dao;
+
+import com.capgemini.contactdetails.bean.Contact;
+
+public interface ContactDao {
+
+	boolean addContact(Contact bean);
+	boolean deleteContact(String name);
+	boolean modifyContact(Contact bean);
+}

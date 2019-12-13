@@ -1,0 +1,36 @@
+package com.capgemini.contactdetails.main;
+
+import java.util.Scanner;
+
+public class Info {
+
+	public static void main(String[] args) {
+
+		Scanner sc=new Scanner(System.in);
+		while(true) {
+			System.out.println("press 1 to call");
+			System.out.println("press 2 to message");
+			System.out.println("press 3 to go back to main menu");
+			int ch=sc.nextInt();
+			switch(ch){
+			case 1:
+				System.out.println("Calling");
+				
+
+				break;
+			case 2:
+				System.out.println("type message here");
+				String msg=sc.next();
+				System.out.println("sending....");
+
+				break;
+			case 3:
+				Contactmain.main(args);
+				break;
+			}
+		}
+
+
+	}
+
+}

@@ -1,0 +1,113 @@
+package com.capgemini.contactdetails.dao;
+
+import java.io.FileReader;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.util.Properties;
+
+import com.capgemini.contactdetails.bean.Contact;
+
+public class ContactDaoImpl implements ContactDao{
+
+	FileReader reader;
+	Properties prop;
+	Contact contact;
+	
+	public ContactDaoImpl()
+	{
+		try {
+			reader=new FileReader("data.properties");
+			prop=new Properties();
+			prop.load(reader);
+			contact=new Contact();
+			Class.forName(prop.getProperty("driverClass"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	@Override
+	public boolean addContact(Contact contact) {
+		try(	Connection conn=DriverManager.getConnection(prop.getProperty("dbUrl"),prop.getProperty("dbUser"),prop.getProperty("dbPassword"));
+				PreparedStatement pstmt=conn.prepareStatement(prop.getProperty("insertQuery"));){	
+				pstmt.setString(1, contact.getName());
+				pstmt.setInt(2, contact.getNumber());
+				pstmt.setString(3, contact.getGroup());
+		
+		int count=pstmt.executeUpdate();
+
+		if(count>0){
+			return true;
+		}
+	}catch(Exception e)		{
+		System.out.println(e.getMessage());
+	}
+		return false;
+	}
+
+	@Override
+	public boolean deleteContact(String name) {
+		try(	Connection conn=DriverManager.getConnection(prop.getProperty("dbUrl"),prop.getProperty("dbUser"),prop.getProperty("dbPassword"));
+				PreparedStatement pstmt=conn.prepareStatement(prop.getProperty("deleteQuery"));	) {
+		pstmt.setString(1, name);
+		
+		int count=pstmt.executeUpdate();
+		if(count>0)			{
+			return true;
+		}
+	}catch(Exception e)		{
+		e.printStackTrace();
+	}
+		
+		
+		
+		return false;
+	}
+
+	@Override
+	public boolean modifyContact(Contact bean) {
+		try(Connection conn=DriverManager.getConnection(prop.getProperty("dbUrl"),prop.getProperty("dbUser"),prop.getProperty("dbPassword"));
+				PreparedStatement pstmt=conn.prepareStatement(prop.getProperty("updateQuery"));	)		{
+			
+			pstmt.setString(3, contact.getName());
+			pstmt.setInt(1, contact.getNumber());
+			pstmt.setString(2, contact.getGroup());
+			int count=pstmt.executeUpdate();
+			if(count>0)			{
+				return true;
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+			
+			
+		return false;
+	}
+
+	@Override
+	public Contact getContact(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+	
+
+	
+		
+	

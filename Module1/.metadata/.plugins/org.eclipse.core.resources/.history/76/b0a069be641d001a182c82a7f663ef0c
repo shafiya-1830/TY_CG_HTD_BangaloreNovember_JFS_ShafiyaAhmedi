@@ -1,0 +1,10 @@
+package com.capgemini.contactdetails.bean;
+
+public class Contact {
+
+	private String name;
+	private int number;
+	private String group;
+	
+	
+}

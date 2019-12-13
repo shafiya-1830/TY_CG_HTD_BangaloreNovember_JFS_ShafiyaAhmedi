@@ -1,0 +1,10 @@
+package com.capgemini.contactdetails.main;
+
+public class Contactmain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

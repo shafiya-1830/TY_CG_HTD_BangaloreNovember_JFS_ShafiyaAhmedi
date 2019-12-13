@@ -1,0 +1,57 @@
+package com.capgemini.contactdetails.main;
+
+import java.util.Scanner;
+
+import com.capgemini.contactdetails.bean.Contact;
+import com.capgemini.contactdetails.factory.ContactManager;
+import com.capgemini.contactdetails.services.ContactService;
+
+public class Operations {
+
+	public static void main(String[] args) {
+
+		Scanner sc=new Scanner(System.in);
+		ContactService service=ContactManager.instanceOfContactServicesImpl();
+		Contact contact=new Contact();
+		while(true) {
+			System.out.println("press 1 to add contact");
+			System.out.println("press 2 to delete contact");
+			System.out.println("press 3 to edit contact");
+			int ch=sc.nextInt();
+			switch(ch)
+			{
+			case 1:
+				System.out.println("Name");
+				contact.setName(sc.next());
+				System.out.println("Number");
+				contact.setNumber(sc.nextLong());
+				System.out.println("Groups");
+				contact.setGroup(sc.next());
+				if(service.addContact(contact)){
+					System.out.println("contact added");
+				}else{
+					System.err.println("something went wrong");
+				}
+				break;
+			case 2:
+
+				if(service.deleteContact(contact.getName())){
+					System.out.println("contact deleted");
+				}else{
+					System.err.println("something went wrong");
+				}
+				break;
+			case 3:
+				boolean result=service.editContact(contact);
+				if(result){
+					System.out.println("contact edited");
+				}else{
+					System.err.println("something went wrong");
+				}
+				break;
+			}
+
+		}
+	}
+
+}

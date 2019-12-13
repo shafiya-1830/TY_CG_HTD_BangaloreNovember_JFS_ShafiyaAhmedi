@@ -1,0 +1,5 @@
+package com.capgemini.contactdetails.bean;
+
+public class Contact {
+
+}

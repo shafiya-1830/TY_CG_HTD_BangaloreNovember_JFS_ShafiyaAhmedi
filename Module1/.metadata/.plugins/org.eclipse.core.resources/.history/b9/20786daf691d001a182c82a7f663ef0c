@@ -1,0 +1,28 @@
+package com.capgemini.contactdetails.main;
+
+import java.util.Scanner;
+
+public class Operations {
+
+	public static void main(String[] args) {
+
+		Scanner sc=new Scanner(System.in);
+		int ch=sc.nextInt();
+		
+		System.out.println("press 1 to add contact");
+		System.out.println("press 2 to delete contact");
+		System.out.println("press 3 to edit contact");
+		int ch=sc.nextInt();
+		switch(ch)
+		{
+		case 1:
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+
+		}
+	}
+
+}
