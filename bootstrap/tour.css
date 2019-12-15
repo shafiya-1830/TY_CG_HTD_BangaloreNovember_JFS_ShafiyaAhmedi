@@ -1,0 +1,68 @@
+
+.naav a{
+   font-size: 20px;
+   font-color:black;
+}
+
+.one, .two
+    {
+        float: right;
+    }
+  .container img{
+        height:200px;
+        width:200px;
+    }
+    .carousel-inner img{
+        height:400px;
+        width:200px;
+    }
+    .card-group img
+    {
+        height:200px;
+        width:400px;
+    }
+    .dark
+    {
+        margin-left: 5%;
+       margin-right:5%;
+        
+    }
+    
+    .light
+    {
+        margin-left: 5%;
+       margin-right:5%;
+        
+    }
+
+    .col-md-4 img{
+        width:100px;
+        height:100px;
+        border-radius: 50%;
+    }
+.cont{
+width:100%;
+}
+    .darker
+    {
+        background-color: black;
+        height:50px;
+    }
+   .darker .mar
+   {
+       margin-left:10%;
+       margin-right:10%;
+   }
+    .darker .icon
+    {
+    float:left;
+    margin:0px 20px 0px 20px;
+    color:#01d7a7 !important;
+    font-size:30px;
+    }
+    .zero
+    {
+        color:white;
+        font-size: 20px;
+        float:right;
+    }
