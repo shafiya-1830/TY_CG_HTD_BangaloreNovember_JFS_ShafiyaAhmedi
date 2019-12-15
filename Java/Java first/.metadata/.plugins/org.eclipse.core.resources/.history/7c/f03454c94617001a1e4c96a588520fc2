@@ -1,0 +1,28 @@
+package dataStructureAndAlgorithms;
+
+import java.util.Scanner;
+
+public class AlgoMain {
+
+	public static void main(String[] args) {
+
+
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("enter the array elements");
+		int a[]=new int[5];
+		int c=sc.nextInt();
+		switch(c)
+		{
+		case 1:
+			BubbleSort b=new BubbleSort();
+			b.bubbleSort(a);
+			System.out.println("Bubble sorted array is: ");
+			b.printArray(a);
+		
+		}
+		
+
+	}
+
+}

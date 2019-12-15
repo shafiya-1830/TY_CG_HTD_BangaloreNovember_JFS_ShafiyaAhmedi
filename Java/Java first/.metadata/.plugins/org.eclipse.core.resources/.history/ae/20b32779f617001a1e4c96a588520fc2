@@ -1,0 +1,25 @@
+package com.cap.dataStructureAndAlgorithms.ds;
+
+import java.time.Duration;
+import java.time.Instant;
+
+public class CheckDuration {
+	public static void countingDuration1() {
+		long number=9999999999l;
+		Instant start=Instant.now();
+		System.out.println("addUpto: "+addUpto(number));
+		Instant end=Instant.now();
+		long duration=Duration.between(start, end).toMillis();
+		double seconds=duration/1000;
+		System.out.println("addUpto time: "+seconds+" seconds");
+		}
+	public static void countingDuration2() {
+		long number=9999999999l;
+		Instant start=Instant.now();
+		System.out.println("addUpto: "+addUptoQuick(number));
+		Instant end=Instant.now();
+		long duration=Duration.between(start, end).toMillis();
+		double seconds=duration/1000;
+		System.out.println("addUpto time: "+seconds+" seconds");
+		}
+}

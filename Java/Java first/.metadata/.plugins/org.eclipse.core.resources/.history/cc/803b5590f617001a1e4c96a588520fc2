@@ -1,0 +1,18 @@
+package com.cap.dataStructureAndAlgorithms.ds;
+
+import java.time.Duration;
+import java.time.Instant;
+
+public class CheckDuration {
+	public static void countingDuration2() {
+		Instant start=Instant.now();
+		BubbleSort.bubbleSort(a);
+		System.out.println("Bubble sorted array is: ");
+		b.printArray(a);
+		Instant end=Instant.now();
+		long duration=Duration.between(start, end).toMillis();
+		double seconds=duration/1000;
+		System.out.println("bubble "+seconds+" seconds");
+		}
+	
+}

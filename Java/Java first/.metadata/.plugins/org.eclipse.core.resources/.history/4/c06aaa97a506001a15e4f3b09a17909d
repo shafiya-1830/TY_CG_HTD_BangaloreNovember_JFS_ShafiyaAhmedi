@@ -1,0 +1,16 @@
+
+public class Hero extends HeroHonda {
+
+	@Override
+	void design() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	void engine() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

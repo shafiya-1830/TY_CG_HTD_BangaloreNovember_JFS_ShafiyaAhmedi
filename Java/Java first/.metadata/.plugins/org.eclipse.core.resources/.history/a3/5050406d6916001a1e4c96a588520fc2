@@ -1,0 +1,48 @@
+package com.capgemini.junit.five_junit;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class CalTest {
+
+	@Test
+	public void myTest()
+	{
+		Calculator c=new Calculator();
+		int i=c.add(11, 8);
+		assertEquals(19, i);
+	}
+	
+	@Test
+	void testAddForNegative()
+	{
+		Calculator c=new Calculator();
+		int i=c.add(-2, 5);
+		assertEquals(3, i);
+	}
+	
+	@Test
+	void testMul()
+	{
+		Calculator c=new Calculator();
+		int j=c.multiply(3, 9);
+		assertEquals(27, j);
+	}
+
+	@Test
+	void testMulNegative()
+	{
+		Calculator c=new Calculator();
+		int j=c.multiply(-3, 9);
+		assertEquals(-27, j);
+	}
+	
+	@Test
+	void testDiv()
+	{
+		Calculator c=new Calculator();
+		int k=c.div(30, 0);
+		assertEquals(10, k);
+	}
+}

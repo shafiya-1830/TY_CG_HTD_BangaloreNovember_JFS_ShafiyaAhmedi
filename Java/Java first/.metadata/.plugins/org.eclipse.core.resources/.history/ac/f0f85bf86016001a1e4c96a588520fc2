@@ -1,0 +1,17 @@
+package com.capgemini.junit.five_junit;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class CalTest {
+
+	@Test
+	public void myTest()
+	{
+		Calculator c=new Calculator();
+		int i=c.add(11, 8);
+		assertEquals(18, i);
+	}
+
+}

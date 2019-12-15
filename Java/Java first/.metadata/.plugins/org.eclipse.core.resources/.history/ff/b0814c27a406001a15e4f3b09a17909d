@@ -1,0 +1,8 @@
+
+public class ScientificClaci extends Calculator {
+
+	void add(int a,int b)
+	{
+		
+	}
+}

@@ -1,0 +1,18 @@
+
+public class InstanceBlock {
+final int a;
+InstanceBlock(int a)
+{
+
+	System.out.println("integer");
+}
+InstanceBlock()
+{
+	System.out.println("normal");
+}
+
+{
+	this.a=30;
+	System.out.println(a);
+}
+}

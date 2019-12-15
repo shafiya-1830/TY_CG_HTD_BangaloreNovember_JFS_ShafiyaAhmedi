@@ -1,0 +1,10 @@
+package com.cap.dataStructureAndAlgorithms.ds;
+
+public class AlgoAnalysis {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,28 @@
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class FileOutput {
+
+	public static void main(String[] args) {
+		
+		
+			
+			
+			try {
+				FileOutputStream f1=new FileOutputStream("sia.txt");
+				String s="Sushmitha";
+				
+				byte b1[]=s.getBytes();
+				f1.write(b1);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			System.out.println("success..");
+		
+		
+
+	}
+
+}
