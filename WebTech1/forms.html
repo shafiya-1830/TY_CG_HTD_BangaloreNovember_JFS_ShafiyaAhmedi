@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<form>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="POST">
+        <fieldset>
+
+            <legend>Login details</legend>
+        <label for="firstname">Firstname</label>
+         <input type="text" name="fname" value="Sia" readonly><br><br>
+        Lastname: <input type="text" name="lname"  minlength=3 maxlength=5 value=" "><br><br>
+        E-mail: <input type="email" name="" id=""><br><br>
+        Password: <input type="password" name="pwd" placeholder="enter ur password" required><br><br>
+    </fieldset>
+
+    <fieldset>
+
+            <legend>Options</legend>
+        Gender: <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female" checked>Female
+        <br><br>
+        Languages:
+       <br>  <input type="checkbox" name="lang" value="java">java<br>
+        <input type="checkbox" name="lang" value="sql">sql<br>
+        <input type="checkbox" name="lang" value="webtech">webtech<br><br>
+        <input type="number" name="quantity" min="1" max="5" step="2"> <!-- step attribute shld contain only +ve value -->
+        <select name="places" size="" id="">
+                <option value=""></option>
+            <option value="Goa">Goa</option>
+            <option value="Pune">Pune</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Mumbai">Mumbai</option>
+
+        </select>
+        <input list="lang">
+        <datalist id="lang">
+                <option value="eng">eng</option>
+                <option value="Pune">marati</option>
+                <option value="Bangalore">kannada</option>
+                <option value="Mumbai">konkani</option>
+        </datalist>
+        <br>
+        <br>
+        <input type="file" value="choose file">
+    </fieldset>
+        <br><br>
+        Feedback:
+        <br>
+        <textarea name="feedback" id="" cols="30" rows="10"></textarea>
+        <br>
+        <input type="date" name="" id="">
+        <br>
+        <input type="submit" value="Submit"><br><br>
+
+        <input type="reset" value="Reset" name=""  id=""><br><br>
+<audio controls>
+        <source src="./Mi_Gente.mp3" type="audio/mp3"></audio>
+        
+
+    </form>
+</body>
+</html>
